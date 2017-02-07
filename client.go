@@ -39,7 +39,6 @@ func (this *Client) Single(token, title, text string, custom map[string]string) 
 	msg.DeviceTokens = token
 	msg.ProductionMode = string(this.mode)
 
-	fmt.Printf("%s\n", msg.String())
 	req, err := MakeRequest(msg, SEND_MSG_URI, this.appMasterSecret)
 	if err != nil {
 		return nil, err
@@ -62,7 +61,6 @@ func (this *Client) Group(tokens, title, text string, custom map[string]string) 
 	msg.DeviceTokens = tokens
 	msg.ProductionMode = string(this.mode)
 
-	fmt.Printf("%s\n", msg.String())
 	req, err := MakeRequest(msg, SEND_MSG_URI, this.appMasterSecret)
 	if err != nil {
 		return nil, err
@@ -84,7 +82,6 @@ func (this *Client) All(title, text string, custom map[string]string) (*MsgRespo
 	msg.Type = "broadcast"
 	msg.ProductionMode = string(this.mode)
 
-	fmt.Printf("%s\n", msg.String())
 	req, err := MakeRequest(msg, SEND_MSG_URI, this.appMasterSecret)
 	if err != nil {
 		return nil, err
