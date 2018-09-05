@@ -13,6 +13,7 @@ func NewMessage(appKey, title, text string, custom map[string]string) *Message {
 	custom["text"] = text
 
 	msg := &Message{
+		Mipush: "true",
 		AppKey: appKey,
 		PayloadName: Payload{
 			DisplayType: "message",

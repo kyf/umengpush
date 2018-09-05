@@ -105,6 +105,7 @@ type Message struct {
 	PolicyName     Policy            `json:"policy"`          // 可选 发送策略
 	ProductionMode string            `json:"production_mode"` // 可选 正式/测试模式。测试模式下，只会将消息发给测试设备,测试设备需要到web上添加.Android: 测试设备属于正式设备的一个子集
 	Description    string            `json:"description"`     // 可选 发送消息描述，建议填写
+	Mipush         string            `json:"mipush"`          //可选，默认为false。当为true时，表示MIUI、EMUI、Flyme系统设备离线转为系统下发
 	ThirdPartId    string            `json:"thirdparty_id"`   // 可选 开发者自定义消息标识ID, 开发者可以为同一批发送的多条消息提供同一个thirdparty_id, 便于友盟后台后期合并统计数据
 }
 

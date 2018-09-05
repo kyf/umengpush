@@ -18,7 +18,7 @@ const (
 
 var (
 	tokens = map[string]string{
-		"oppo":  "Ak1FY1ojtdyIevgDdRfwz7gYjGccNjGz30FE_ruK1ODr",
+		"oppo":  "Ar4jhzpt_iSs5QOHP8n32PG_gZAyRDehZBEY_RdbhOkH", //"Ak1FY1ojtdyIevgDdRfwz7gYjGccNjGz30FE_ruK1ODr",
 		"leshi": "AgLQRQWfCVcJKNB9jRkxIAB7nMnMBihQs0vuFFZ17aq9",
 	}
 
@@ -39,6 +39,7 @@ func TestSingle(t *testing.T) {
 	log.Print(resp)
 }
 
+/*
 func TestGroup(t *testing.T) {
 	list := tokens["oppo"] + "," +
 		tokens["leshi"]
@@ -57,3 +58,4 @@ func TestAll(t *testing.T) {
 	}
 	log.Print(resp)
 }
+*/
